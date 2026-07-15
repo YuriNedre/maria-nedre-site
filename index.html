@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maria Nedre — Applied Neurology Educator, Movement Specialist, practitioner mentor, webinar creator, and podcast host.">
+<title>Maria Nedre | Applied Neurology Educator</title>
+<style>
+:root{
+  --bg:#071117;
+  --bg2:#0c1a1f;
+  --panel:#102329;
+  --paper:#f3efe7;
+  --red:#e63232;
+  --red2:#ff5a4f;
+  --gold:#d8b36a;
+  --teal:#6baeb0;
+  --ink:#101415;
+  --muted:#667175;
+  --line:rgba(255,255,255,.12);
+  --max:1180px;
+  --radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#fff;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.kicker{
+  display:flex;align-items:center;gap:12px;
+  font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red2)
+}
+.kicker:before{content:"";width:34px;height:2px;background:var(--red2)}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 22px;border-radius:999px;font-weight:800;transition:.25s;border:1px solid transparent
+}
+.button.red{background:linear-gradient(135deg,var(--red2),var(--red));color:#fff;box-shadow:0 14px 30px rgba(230,50,50,.28)}
+.button.ghost{border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.04);color:#fff}
+.button:hover{transform:translateY(-2px)}
+.nav{position:absolute;top:0;left:0;right:0;z-index:10;padding:26px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.brand strong{display:block;letter-spacing:.1em}
+.brand span{display:block;color:#9eb3b7;font-size:.64rem;text-transform:uppercase;letter-spacing:.14em}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:.78rem;font-weight:700}
+.hero{
+  min-height:830px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 26%,rgba(230,50,50,.24),transparent 22%),
+    linear-gradient(120deg,#050b0f 0%,#0a1a20 58%,#101a19 100%);
+  padding:150px 0 90px;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:linear-gradient(to bottom,black,transparent 88%);
+}
+.hero:after{
+  content:"";position:absolute;right:-160px;top:-120px;width:680px;height:680px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.07);box-shadow:inset 0 0 100px rgba(230,50,50,.08)
+}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center}
+.hero h1{
+  font-size:clamp(3.5rem,7vw,6.8rem);line-height:.9;letter-spacing:-.065em;margin:20px 0 26px
+}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero-copy{font-size:1.16rem;color:#c8d4d6;max-width:700px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-visual{position:relative}
+.hero-photo{
+  width:100%;height:620px;object-fit:cover;object-position:center 16%;
+  border-radius:34px;filter:saturate(.92) contrast(1.04);
+  box-shadow:0 36px 100px rgba(0,0,0,.48);
+  border:1px solid rgba(255,255,255,.13)
+}
+.neuro-orbit{
+  position:absolute;right:-38px;bottom:-46px;width:235px;aspect-ratio:1;border-radius:50%;
+  padding:12px;background:rgba(9,23,27,.92);border:1px solid rgba(255,255,255,.14);box-shadow:0 26px 70px rgba(0,0,0,.45)
+}
+.neuro-orbit img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-tag{
+  position:absolute;left:-46px;bottom:42px;background:var(--paper);color:var(--ink);
+  border-radius:20px;padding:18px 20px;width:240px;box-shadow:0 28px 70px rgba(0,0,0,.3)
+}
+.hero-tag strong{display:block;color:var(--red);font-size:1.8rem;line-height:1}
+.hero-tag span{font-size:.79rem;color:#566064;font-weight:700}
+.metrics{position:relative;z-index:4;margin-top:-48px}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.24)}
+.metric{padding:29px 28px;border-right:1px solid #ddd6ca}.metric:last-child{border-right:0}
+.metric strong{display:block;font-size:2rem;letter-spacing:-.04em;color:var(--red)}
+.metric span{font-size:.82rem;color:#687175;font-weight:700}
+section{padding:96px 0}
+.light{background:var(--paper);color:var(--ink)}
+.section-head{max-width:820px;margin-bottom:42px}
+.section-head h2{font-size:clamp(2.5rem,5vw,4.8rem);line-height:.98;letter-spacing:-.055em;margin:14px 0 18px}
+.section-head p{font-size:1.06rem;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:72px;align-items:start}
+.about-photo-wrap{position:relative}
+.about-photo{width:100%;height:690px;object-fit:cover;object-position:center 21%;border-radius:28px;filter:grayscale(1);box-shadow:0 26px 70px rgba(0,0,0,.18)}
+.about-caption{position:absolute;right:-28px;bottom:30px;background:#fff;border-radius:18px;padding:18px 20px;width:230px;box-shadow:0 20px 55px rgba(0,0,0,.16)}
+.about-caption strong{display:block;font-size:1.1rem}.about-caption span{font-size:.8rem;color:var(--muted)}
+.about-copy p{font-size:1.08rem;color:#3d474b}
+.checks{display:grid;gap:15px;margin-top:30px}
+.check{display:grid;grid-template-columns:30px 1fr;gap:13px}
+.check i{font-style:normal;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f9d9d7;color:var(--red);font-weight:900}
+.dark-panel{background:var(--bg2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:linear-gradient(145deg,#102329,#0b171c);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 16px 45px rgba(0,0,0,.2)}
+.card-media{height:210px;overflow:hidden}.card-media img{width:100%;height:100%;object-fit:cover;transition:.35s}.card:hover .card-media img{transform:scale(1.04)}
+.card-body{padding:24px}.card-body small{color:var(--red2);font-weight:800;letter-spacing:.13em;text-transform:uppercase}.card-body h3{font-size:1.28rem;margin:9px 0}.card-body p{color:#b8c7ca;font-size:.92rem;margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{border:1px solid #d9d0c4;background:#fff;border-radius:22px;padding:26px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+.service-num{font-size:.75rem;letter-spacing:.14em;color:var(--red);font-weight:900}
+.service h3{font-size:1.3rem;margin:12px 0}.service p{font-size:.92rem;color:var(--muted);margin:0}
+.split-band{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px}
+.split-image img{width:100%;height:100%;object-fit:cover}
+.split-copy{background:linear-gradient(140deg,#7f1719,#d73737);padding:64px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.split-copy h2{font-size:clamp(2.5rem,4.5vw,4.7rem);line-height:.98;letter-spacing:-.05em;margin:12px 0 20px}
+.split-copy p{color:#ffe8e6;font-size:1.02rem}
+.topics{display:flex;flex-wrap:wrap;gap:10px}.topic{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #d9d0c4;color:#384246;font-size:.84rem;font-weight:700}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.edu{border:1px solid #d8d0c5;background:#fff;border-radius:18px;padding:22px 24px}.edu strong{display:block}.edu span{font-size:.88rem;color:var(--muted)}
+.contact{background:linear-gradient(120deg,#061117,#11262a);position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;inset:0;background:url("assets/neurons.jpg") center/cover;opacity:.13;pointer-events:none}
+.contact-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.contact h2{font-size:clamp(2.6rem,5vw,5rem);line-height:.98;letter-spacing:-.055em;margin:0 0 18px}
+.contact p{color:#bed0d3;max-width:690px}
+footer{background:#04090c;color:#9fb0b3;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:25px;font-size:.8rem}
+.disclaimer{font-size:.75rem;color:#7b8589;margin-top:18px}
+
+.booking-wrap{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}
+.booking-copy h2{font-size:clamp(2.6rem,5vw,5rem);line-height:.98;letter-spacing:-.055em;margin:14px 0 20px}
+.booking-copy p{color:#bed0d3;font-size:1.02rem}
+.booking-note{margin-top:24px;padding:18px 20px;border-left:3px solid var(--red2);background:rgba(255,255,255,.045);color:#b8c8cb;font-size:.88rem;border-radius:0 14px 14px 0}
+.booking-form{background:var(--paper);color:var(--ink);border-radius:26px;padding:30px;box-shadow:0 28px 80px rgba(0,0,0,.3)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:8px;margin-bottom:16px}
+.field label{font-size:.82rem;font-weight:800;color:#364145}
+.field input,.field textarea{width:100%;border:1px solid #d7cec2;background:#fff;border-radius:14px;padding:14px 15px;font:inherit;color:var(--ink);outline:none;transition:.2s}
+.field input:focus,.field textarea:focus{border-color:var(--red2);box-shadow:0 0 0 3px rgba(230,50,50,.12)}
+.field textarea{min-height:150px;resize:vertical}
+.form-submit{width:100%;cursor:pointer;border:0;font:inherit}
+.form-help{font-size:.74rem;color:#7b8589;margin:12px 0 0}
+
+@media(max-width:980px){
+  .nav-links{display:none}.hero-grid,.about-grid,.split-band,.booking-wrap{grid-template-columns:1fr}.hero-photo{height:580px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.split-image{height:430px}
+}
+@media(max-width:650px){
+  .container{width:calc(100% - 24px)}.hero{padding-top:122px;min-height:auto}.hero h1{font-size:3.45rem}.hero-photo{height:500px}.hero-tag{left:12px;bottom:24px}.neuro-orbit{width:165px;right:-8px}.metrics{margin-top:-25px}.metrics-grid,.cards,.service-grid,.edu-grid{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid #ddd6ca}.metric:last-child{border-bottom:0}section{padding:72px 0}.about-photo{height:560px}.about-caption{right:12px}.split-copy{padding:42px 26px}.contact-inner,.footer-inner{display:block}.contact .button{margin-top:24px}.form-row{grid-template-columns:1fr}
+}
+
+/* FINAL FORM INTERACTIVITY FIX */
+#booking.contact{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 13% 30%, rgba(230,50,50,.10), transparent 28%),
+    linear-gradient(120deg,#061117,#10262b) !important;
+}
+#booking.contact::before,
+#booking.contact::after{
+  display:none !important;
+  content:none !important;
+  pointer-events:none !important;
+}
+#booking .booking-wrap{
+  position:relative !important;
+  z-index:50 !important;
+  pointer-events:auto !important;
+}
+#booking .booking-copy{
+  position:relative !important;
+  z-index:51 !important;
+  padding:18px 0 !important;
+}
+#booking .booking-copy::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-40px -22px -40px -55px !important;
+  z-index:-1 !important;
+  border-radius:28px !important;
+  background:
+    linear-gradient(90deg,rgba(6,17,23,.94),rgba(6,17,23,.70)),
+    url("assets/neurons.jpg") center/cover no-repeat !important;
+  opacity:1 !important;
+  pointer-events:none !important;
+}
+#booking form.booking-form{
+  position:relative !important;
+  z-index:100 !important;
+  isolation:isolate !important;
+  pointer-events:auto !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  background:#f4ede2 !important;
+  background-image:none !important;
+  border:1px solid #ded2c2 !important;
+  box-shadow:0 28px 80px rgba(0,0,0,.38) !important;
+}
+#booking form.booking-form *,
+#booking form.booking-form input,
+#booking form.booking-form textarea,
+#booking form.booking-form button,
+#booking form.booking-form label{
+  pointer-events:auto !important;
+}
+#booking form.booking-form input,
+#booking form.booking-form textarea{
+  position:relative !important;
+  z-index:110 !important;
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  background:#ffffff !important;
+  background-image:none !important;
+  color:#101415 !important;
+  -webkit-text-fill-color:#101415 !important;
+  border:1px solid #cfc3b4 !important;
+  cursor:text !important;
+  user-select:text !important;
+  -webkit-user-select:text !important;
+  touch-action:manipulation !important;
+}
+#booking form.booking-form input::placeholder,
+#booking form.booking-form textarea::placeholder{
+  color:#767676 !important;
+  opacity:1 !important;
+}
+#booking form.booking-form input:focus,
+#booking form.booking-form textarea:focus{
+  outline:none !important;
+  border-color:#e63232 !important;
+  box-shadow:0 0 0 4px rgba(230,50,50,.16) !important;
+}
+#booking form.booking-form button{
+  position:relative !important;
+  z-index:110 !important;
+  cursor:pointer !important;
+  opacity:1 !important;
+}
+#booking .form-help{
+  color:#697377 !important;
+  opacity:1 !important;
+}
+
+
+#booking form.booking-form input[type="hidden"],
+#booking form.booking-form input[style*="display:none"]{
+  display:none !important;
+  visibility:hidden !important;
+  position:absolute !important;
+  width:0 !important;
+  height:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+}
+
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top"><strong>MARIA NEDRE</strong><span>Applied Neurology Education</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">What She Does</a><a href="#education">Education</a><a href="#booking">Booking</a>
+      <a class="button red" href="#booking">Contact Maria</a>
+    </div>
+  </div>
+</nav>
+<div class="container hero-grid">
+  <div>
+    <div class="kicker">The nervous system changes everything</div>
+    <h1>Applied Neurology <em>Made Practical.</em></h1>
+    <p class="hero-copy">Maria Nedre helps personal trainers, physical and rehabilitation professionals, physicians, health practitioners, and movement specialists understand how the brain and nervous system influence pain, movement, balance, breathing, coordination, and performance.</p>
+    <div class="hero-actions">
+      <a class="button red" href="#expertise">Explore Her Expertise</a>
+      <a class="button ghost" href="mailto:m.s.nedre@gmail.com">Book a Conversation</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img class="hero-photo" src="assets/maria-hero-new.jpg" alt="Maria Nedre">
+    <div class="hero-tag"><strong>3,000+</strong><span>hours of individual and group teaching, mentoring, and practice</span></div>
+    <div class="neuro-orbit"><img src="assets/brain-floral.jpg" alt=""></div>
+  </div>
+</div>
+</header>
+
+<div class="metrics">
+  <div class="container metrics-grid">
+    <div class="metric"><strong>9+ years</strong><span>of education, consultation, and mentoring</span></div>
+    <div class="metric"><strong>1,000+</strong><span>clients and learners reached</span></div>
+    <div class="metric"><strong>50+</strong><span>advanced professional courses completed</span></div>
+    <div class="metric"><strong>Global</strong><span>live and online teaching experience</span></div>
+  </div>
+</div>
+
+<section class="light" id="about">
+  <div class="container about-grid">
+    <div class="about-photo-wrap">
+      <img class="about-photo" src="assets/maria-bw.jpg" alt="Maria Nedre on the coast">
+      <div class="about-caption"><strong>Science. Clarity. Application.</strong><span>Complex neurological ideas translated into practical professional tools.</span></div>
+    </div>
+    <div class="about-copy">
+      <div class="kicker">About Maria</div>
+      <div class="section-head">
+        <h2>An educator who makes neuroscience usable.</h2>
+        <p>Maria Nedre is an Applied Neurology Educator, Movement Specialist, course creator, and practitioner mentor with an academic foundation in biology and microbiology.</p>
+      </div>
+      <p>Her work sits at the intersection of neuroscience education, movement, and pain. Maria is known for turning difficult concepts into clear assessment frameworks, practical exercise choices, and understandable client communication.</p>
+      <div class="checks">
+        <div class="check"><i>✓</i><div><strong>Professional education.</strong> She teaches personal trainers, coaches, physicians, physical and rehabilitation professionals, Pilates instructors, and health practitioners the foundations of applied neurology.</div></div>
+        <div class="check"><i>✓</i><div><strong>Pain-focused application.</strong> She explains how the nervous system influences pain and how professionals can build more thoughtful movement-based strategies.</div></div>
+        <div class="check"><i>✓</i><div><strong>Private consultation.</strong> Maria works one-on-one with clients on movement quality, posture, gait, breathing, balance, coordination, headaches, and pain-related limitations.</div></div>
+        <div class="check"><i>✓</i><div><strong>Original educational products.</strong> She creates webinars, recorded courses, practitioner guides, neuro-based lessons, and mentorship programs.</div></div>
+        <div class="check"><i>✓</i><div><strong>Podcast creator and host.</strong> She created and hosts “Simply About Complex Things,” a podcast about applied neurology, the brain, movement, pain, and health.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-panel" id="expertise">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Her Teaching Universe</div>
+      <h2>Brain, senses, movement, and pain.</h2>
+      <p>Maria’s teaching connects sensory input, neurological processing, motor output, and lived experience—giving professionals a stronger framework for understanding why the body moves and hurts the way it does.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="card-media"><img src="assets/eye.jpg" alt="Visual system"></div><div class="card-body"><small>Visual System</small><h3>Vision, orientation, and movement</h3><p>How visual input affects balance, coordination, motor control, posture, and performance.</p></div></article>
+      <article class="card"><div class="card-media"><img src="assets/ear.jpg" alt="Vestibular system"></div><div class="card-body"><small>Vestibular System</small><h3>Balance and spatial control</h3><p>Practical understanding of the inner ear, stability, gaze, balance, and movement confidence.</p></div></article>
+      <article class="card"><div class="card-media"><img src="assets/brain-gears.jpg" alt="Pain science"></div><div class="card-body"><small>Pain Science</small><h3>The nervous system and pain</h3><p>Clear education on pain processing, threat, sensitivity, and movement-based intervention strategies.</p></div></article>
+      <article class="card"><div class="card-media"><img src="assets/neurons.jpg" alt="Neural pathways"></div><div class="card-body"><small>Applied Neurology</small><h3>Neural pathways in practice</h3><p>Assessment, exercise selection, dosage, progression, and professional reasoning through a neurological lens.</p></div></article>
+      <article class="card"><div class="card-media"><img src="assets/brain-tree.jpg" alt="Brain development"></div><div class="card-body"><small>Motor Learning</small><h3>Building better movement</h3><p>How the brain learns, adapts, coordinates, and refines movement through appropriately designed practice.</p></div></article>
+      <article class="card"><div class="card-media"><img src="assets/brain-floral.jpg" alt="Whole-person neurology"></div><div class="card-body"><small>Whole-Person Function</small><h3>Breathing, posture, gait, and regulation</h3><p>Integrated education across breathing, posture, gait, coordination, energy, stress, and nervous-system regulation.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">What She Does</div>
+      <h2>Education that changes professional practice.</h2>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div><div class="service-num">01 · WEBINARS</div><h3>Professional Webinars</h3></div><p>Live and recorded education for trainers and health professionals, combining neuroscience theory, demonstration, assessment logic, and immediate practical application.</p></article>
+      <article class="service"><div><div class="service-num">02 · MENTORSHIP</div><h3>Practitioner Mentoring</h3></div><p>Structured support in client intake, movement assessment, exercise selection, session design, progression, and professional decision-making.</p></article>
+      <article class="service"><div><div class="service-num">03 · CONSULTATION</div><h3>Private Consultations</h3></div><p>One-on-one work focused on pain-related movement limitations, posture, gait, breathing, balance, headaches, stress, sleep, and coordination.</p></article>
+      <article class="service"><div><div class="service-num">04 · CONTENT</div><h3>Courses & Practitioner Guides</h3></div><p>Original courses, structured neuro-lessons, teaching materials, and practical guides designed to make applied neurology understandable and usable.</p></article>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0">
+  <div class="split-band">
+    <div class="split-image"><img src="assets/brain-gears.jpg" alt="Applied neurology and pain science"></div>
+    <div class="split-copy">
+      <div class="kicker" style="color:#fff">Podcast Creator & Host</div>
+      <h2>“Simply About Complex Things”</h2>
+      <p>Maria created and hosts an educational podcast about applied neurology, the brain, the body, movement, pain, and health. The show demonstrates her distinctive strength: explaining sophisticated scientific concepts in language that is clear, engaging, and useful.</p>
+      <div style="margin-top:24px"><a class="button ghost" href="mailto:m.s.nedre@gmail.com">Invite Maria to Speak</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Teaching Topics</div>
+      <h2>A broad applied-neurology curriculum.</h2>
+    </div>
+    <div class="topics">
+      <span class="topic">Applied Neurology Fundamentals</span><span class="topic">Pain Science</span><span class="topic">Visual System</span><span class="topic">Vestibular System</span><span class="topic">Cerebellum</span><span class="topic">Cranial Nerves</span><span class="topic">Neurology of Breathing</span><span class="topic">Posture & Gait</span><span class="topic">Movement Assessment</span><span class="topic">Motor Control</span><span class="topic">Low Back Pain</span><span class="topic">Neck Pain</span><span class="topic">Shoulder Pain</span><span class="topic">Knee Pain</span><span class="topic">Headaches</span><span class="topic">Strength & Flexibility</span><span class="topic">Emotional Stability</span><span class="topic">Food Behavior</span>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="education" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Education & Credentials</div>
+      <h2>Built on science. Strengthened by continuous study.</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu"><strong>Bachelor’s Degree in Biology / Microbiology</strong><span>Saint Petersburg State University, Russia</span></div>
+      <div class="edu"><strong>Z-Health® Structure Specialist</strong><span>9S/1: Structure · 32 study hours · 2025</span></div>
+      <div class="edu"><strong>Z-Health® Next Evolution Specialist</strong><span>9S/7: The Next Evolution · 32 study hours · 2025</span></div>
+      <div class="edu"><strong>Z-Health Sustenance & Spirit</strong><span>S6&7 certificate · 32 study hours · 2025</span></div>
+      <div class="edu"><strong>Z-Health Strength & Suppleness</strong><span>S2&3 certificate · 32 study hours · 2026</span></div>
+      <div class="edu"><strong>Polestar Pilates Graduate</strong><span>International Pilates education and instructor training</span></div>
+      <div class="edu"><strong>50+ Continuing-Education Courses</strong><span>Biomechanics, movement, applied neurology, 3D movement analysis, and the Franklin Method</span></div>
+      <div class="edu"><strong>International Teaching Experience</strong><span>Private, group, webinar, mentorship, and recorded-course formats</span></div>
+    </div>
+    <p class="disclaimer">Maria provides education, movement coaching, and wellness consultation. Her services are not a substitute for medical diagnosis, emergency care, or treatment by a licensed healthcare provider.</p>
+  </div>
+</section>
+
+<section class="contact" id="booking">
+  <div class="container booking-wrap">
+    <div class="booking-copy">
+      <div class="kicker">Book a Conversation</div>
+      <h2>Start with your question.</h2>
+      <p>For teaching opportunities, professional collaboration, webinars, mentorship, podcast appearances, or private consultation, send Maria a brief request.</p>
+      <div class="booking-note">Maria reviews each inquiry personally. Include the best way to reach you and a short description of what you are looking for.</div>
+    </div>
+    <form class="booking-form" action="https://formspree.io/f/xzdndrjb" method="POST" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="New inquiry from Maria Nedre landing page">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="Name" type="text" tabindex="1" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="contact">Contact</label>
+          <input id="contact" name="Contact" type="text" tabindex="2" placeholder="Email or phone number" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="request">Request</label>
+        <textarea id="request" name="Request" tabindex="3" placeholder="Tell Maria briefly what you would like to discuss" required></textarea>
+      </div>
+      <button class="button red form-submit" type="submit" tabindex="4">Send Request</button>
+      <p class="form-help">The message will be sent through Formspree. By submitting this form, you agree that Maria may contact you regarding your inquiry.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong style="color:#fff">MARIA NEDRE</strong><br>Applied Neurology Educator & Movement Specialist</div>
+    <div>Austin, Texas · Remote & In-Person</div>
+    <div>© 2026 Maria Nedre</div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("#booking input, #booking textarea, #booking button").forEach(function (element) {
+    element.disabled = false;
+    if ("readOnly" in element) element.readOnly = false;
+    element.removeAttribute("inert");
+    element.style.pointerEvents = "auto";
+  });
+});
+</script>
+
+</body>
+</html>
