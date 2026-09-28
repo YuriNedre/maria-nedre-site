@@ -267,6 +267,28 @@ footer{background:#04090c;color:#9fb0b3;padding:30px 0}.footer-inner{display:fle
   border:0 !important;
 }
 
+
+/* Free neuro lesson feature */
+.free-lesson{padding:72px 0;background:#f4eee7;}
+.free-lesson-card{max-width:1100px;margin:0 auto;padding:54px 60px;border-radius:28px;background:#fff;box-shadow:0 18px 50px rgba(31,24,20,.08);}
+.neural-lessons-title{text-align:center;font-size:clamp(32px,4vw,50px);font-weight:800;line-height:1.05;margin:0 0 42px;color:#2d2825;}
+.free-lesson-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:42px;align-items:center;}
+.free-lesson p{font-size:18px;line-height:1.7;margin:0;color:#5d554f;max-width:720px;}
+.free-lesson-action{text-align:center;}
+.free-lesson-action .button{display:flex;width:100%;min-height:74px;align-items:center;justify-content:center;padding:18px 30px;font-size:17px;line-height:1.25;border-radius:14px;}
+.free-lesson-note{display:block;margin-top:12px;font-size:13px;color:#81766e;}
+.paid-training-label{margin-top:28px;margin-bottom:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#5d554f;text-align:center;}
+.course-links{margin-top:18px;}
+.safety-details{margin-top:42px;border-top:1px solid #e5ddd6;padding-top:24px;}
+.safety-details summary{cursor:pointer;font-size:17px;font-weight:800;color:#3d3733;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:8px 0;}
+.safety-details summary::-webkit-details-marker{display:none;}
+.safety-details summary:after{content:'+';font-size:26px;font-weight:400;line-height:1;}
+.safety-details[open] summary:after{content:'−';}
+.safety-content{padding:18px 0 4px;color:#5d554f;font-size:15px;line-height:1.65;}
+.safety-content p{font-size:15px;line-height:1.65;margin:0 0 14px;max-width:none;}
+.safety-content ul{margin:10px 0 18px;padding-left:22px;}
+.safety-content li{margin:8px 0;}
+@media(max-width:760px){.free-lesson{padding:42px 0}.free-lesson-card{margin:0 18px;padding:34px 26px}.neural-lessons-title{margin-bottom:28px}.free-lesson-grid{grid-template-columns:1fr;gap:26px}.free-lesson-action{text-align:left}.paid-training-label{text-align:left}}
 </style>
 </head>
 <body>
@@ -275,7 +297,7 @@ footer{background:#04090c;color:#9fb0b3;padding:30px 0}.footer-inner{display:fle
   <div class="container nav-inner">
     <a class="brand" href="#top"><strong>MARIA NEDRE</strong><span>Applied Neurology Education</span></a>
     <div class="nav-links">
-      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">What She Does</a><a href="#education">Education</a><a href="#booking">Booking</a>
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">What She Does</a><a href="#education">Education</a><a href="#free-neuro-lesson">Neuro Trainings</a><a href="#booking">Booking</a>
       <a class="button red" href="#booking">Contact Maria</a>
     </div>
   </div>
@@ -286,7 +308,8 @@ footer{background:#04090c;color:#9fb0b3;padding:30px 0}.footer-inner{display:fle
     <h1>Applied Neurology <em>Made Practical.</em></h1>
     <p class="hero-copy">Maria Nedre helps personal trainers, physical and rehabilitation professionals, physicians, health practitioners, and movement specialists understand how the brain and nervous system influence pain, movement, balance, breathing, coordination, and performance.</p>
     <div class="hero-actions">
-      <a class="button red" href="#expertise">Explore Her Expertise</a>
+      <a class="button red" href="#free-neuro-lesson">Neuro Trainings</a>
+      <a class="button ghost" href="#expertise">Explore Her Expertise</a>
       <a class="button ghost" href="mailto:m.s.nedre@gmail.com">Book a Conversation</a>
     </div>
   </div>
@@ -306,6 +329,46 @@ footer{background:#04090c;color:#9fb0b3;padding:30px 0}.footer-inner{display:fle
     <div class="metric"><strong>Global</strong><span>live and online teaching experience</span></div>
   </div>
 </div>
+<section class="free-lesson" id="free-neuro-lesson">
+  <div class="container">
+    <div class="free-lesson-card">
+      <h2 class="neural-lessons-title">Neural Lessons</h2>
+      <div class="free-lesson-grid">
+        <div>
+          <p>Start with a free 20-minute lesson from Maria and discover how the nervous system can change the way you think about movement, pain, balance, and performance. A concise, practical introduction designed for coaches, movement professionals, and health practitioners.</p>
+        </div>
+        <div class="free-lesson-action">
+          <a class="button red" href="https://mariianedre.podia.com/free-20-minute-neuro-lesson" target="_blank" rel="noopener noreferrer">Watch the Free Neuro Lesson</a>
+          <span class="free-lesson-note">Free access · 20 minutes</span>
+          <div class="paid-training-label">Paid Neuro Trainings</div>
+          <div class="course-links">
+            <a class="button red" href="https://mariianedre.podia.com/p/shop" target="_blank" rel="noopener noreferrer">All Neuro Trainings</a>
+          </div>
+        </div>
+      </div>
+      <details class="safety-details">
+        <summary>Safety &amp; Contraindications</summary>
+        <div class="safety-content">
+          <p>Please consult a healthcare professional before starting this training if you have:</p>
+          <ul>
+            <li>Serious or unstable heart or cardiovascular conditions</li>
+            <li>Severe or uncontrolled respiratory conditions</li>
+            <li>Uncontrolled high or very low blood pressure</li>
+            <li>A recent heart attack, stroke, or major surgery</li>
+            <li>A history of fainting or loss of consciousness during breathing exercises</li>
+            <li>Epilepsy or a seizure disorder, particularly if the exercises include breath-holding</li>
+            <li>Pregnancy, particularly if the exercises include prolonged breath-holding</li>
+            <li>Any medical condition for which your healthcare provider has advised you to avoid breathing exercises or breath-holding</li>
+          </ul>
+          <p>Perform all exercises gently and never force your breathing or hold your breath beyond a comfortable level.</p>
+          <p>Stop immediately if you experience chest pain, severe shortness of breath, faintness, significant dizziness, unusual heart palpitations, confusion, or any sudden worsening of symptoms.</p>
+          <p>This training is intended for educational and general wellness purposes only and is not a substitute for medical diagnosis, treatment, or individualized rehabilitation.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 
 <section class="light" id="about">
   <div class="container about-grid">
